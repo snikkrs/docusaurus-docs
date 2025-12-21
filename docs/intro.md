@@ -6,9 +6,22 @@ sidebar_position: 1
 
 This documentation explains my project.
 
-# Tutorial Intro
+## Tutorial Intro
 
 Let's discover **Docusaurus in less than 5 minutes**.
+Updated Intro to H2
+
+### New Heading 3
+
+Just to see how this is presented in the docs in final version.
+Here is new line.
+
+### New Heading 3
+
+Just to see how this is presented in the docs in final version.
+Here is new line. 2222
+
+#### New Heading 4
 
 ## Getting Started
 
