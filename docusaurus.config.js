@@ -42,6 +42,11 @@ const config = {
               banner: "none",
               noIndex: false,
             },
+            "0.2.0": {
+              label: "v0.2.0",
+              banner: "none",
+              noIndex: false,
+            },
           },
 
           editUrl: "https://github.com/snikkrs/docusaurus-docs/tree/main/",
