@@ -86,27 +86,7 @@ const config = {
 
     footer: {
       style: "dark",
-      links: [
-        {
-          title: "Docs",
-          items: [
-            {
-              label: "Introduction",
-              to: "/docs/",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "GitHub",
-              href: "https://github.com/snikkrs/docusaurus-docs",
-            },
-          ],
-        },
-      ],
-      copyright: `© ${new Date().getFullYear()} snikkrs. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} snikkrs. Built with love.`,
     },
 
     prism: {
