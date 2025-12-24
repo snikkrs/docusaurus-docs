@@ -1,5 +1,7 @@
 ---
-sidebar_position: 1
+id: index
+title: Documentation
+slug: /
 ---
 
 # Welcome to My Docs
