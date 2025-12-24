@@ -37,16 +37,6 @@ const config = {
             current: {
               label: "Unreleased 🚧",
             },
-            "0.1.0": {
-              label: "v0.1.0",
-              banner: "none",
-              noIndex: false,
-            },
-            "0.2.0": {
-              label: "v0.2.0",
-              banner: "none",
-              noIndex: false,
-            },
           },
 
           editUrl: "https://github.com/snikkrs/docusaurus-docs/tree/main/",
@@ -102,7 +92,7 @@ const config = {
           items: [
             {
               label: "Introduction",
-              to: "/docs/intro",
+              to: "/docs/index",
             },
           ],
         },
