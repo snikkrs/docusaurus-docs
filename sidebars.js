@@ -3,6 +3,7 @@ const sidebars = {
     {
       type: "category",
       label: "Docs Project",
+      collapsed: true,
       link: {
         type: "doc",
         id: "index",

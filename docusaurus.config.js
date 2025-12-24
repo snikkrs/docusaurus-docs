@@ -3,8 +3,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Docusaurus Docs",
-  tagline: "Documentation as Code playground",
+  title: "Docs as Code",
+  tagline: "Using Docusaurus framework for building and deployment.",
   favicon: "img/favicon.ico",
 
   future: {
