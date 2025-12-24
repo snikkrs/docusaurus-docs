@@ -70,7 +70,7 @@ const config = {
     },
 
     navbar: {
-      title: "Docs",
+      title: "Home",
       logo: {
         alt: "Docs Logo",
         src: "img/logo.svg",
@@ -78,9 +78,9 @@ const config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "mainSidebar",
           position: "left",
-          label: "Documentation",
+          label: "Docs",
         },
         {
           type: "docsVersionDropdown",
