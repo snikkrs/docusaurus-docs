@@ -1,10 +1,11 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Global CSS overrides
+ * Infima (Docusaurus default framework)
  */
 
-/* You can override the default Infima variables here. */
+/* ===============================
+   🌞 Light theme colors
+================================ */
 :root {
   --ifm-color-primary: #0550f3;
 
@@ -19,26 +20,120 @@
   --docusaurus-highlighted-code-line-bg: rgba(5, 80, 243, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ===============================
+   🌙 Dark theme colors
+================================ */
 [data-theme="dark"] {
-  --ifm-color-primary: #facc15;
+  --ifm-color-primary: #4c8dff;
 
-  /* darker shades */
-  --ifm-color-primary-dark: #e0b812;
-  --ifm-color-primary-darker: #c9a50f;
-  --ifm-color-primary-darkest: #9f830b;
+  --ifm-color-primary-dark: #3b79f0;
+  --ifm-color-primary-darker: #326fe6;
+  --ifm-color-primary-darkest: #2457b8;
 
-  /* lighter shades */
-  --ifm-color-primary-light: #fbd53a;
-  --ifm-color-primary-lighter: #fcdc57;
-  --ifm-color-primary-lightest: #fde68a;
+  --ifm-color-primary-light: #6aa2ff;
+  --ifm-color-primary-lighter: #85b4ff;
+  --ifm-color-primary-lightest: #adcfff;
 
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --docusaurus-highlighted-code-line-bg: rgba(76, 141, 255, 0.15);
 }
 
+/* ===============================
+   Sidebar separators (optional)
+================================ */
 .theme-doc-sidebar-item-link hr {
   margin: 0.25rem 0;
   height: 1px;
   border: none;
   background-color: var(--ifm-color-emphasis-300);
+}
+
+/* ===============================
+   🧭 SIDEBAR — GitHub Docs style
+   Unified indicator for ALL levels
+================================ */
+
+/* Base sidebar link reset */
+.menu__link {
+  position: relative;
+  font-weight: 400;
+  background: none;
+  padding-left: calc(var(--ifm-menu-link-padding-horizontal) + 10px);
+  color: var(--ifm-menu-color);
+}
+
+/* Unified left indicator (same vertical line for all levels) */
+.menu__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--ifm-color-emphasis-300);
+  transition: background-color 0.2s ease; /* animated slide */
+}
+
+/* Hover effect */
+.menu__link:hover::before {
+  background-color: var(--ifm-color-emphasis-400);
+}
+
+/* ===============================
+   ✅ ACTIVE STATE
+================================ */
+
+/* Active page or folder index */
+.menu__link--active {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.menu__link--active::before {
+  background-color: var(--ifm-color-primary);
+}
+
+/* Folder index (category with link.type=doc) */
+.menu__link--sublist.menu__link--active[href] {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.menu__link--sublist.menu__link--active[href]::before {
+  background-color: var(--ifm-color-primary);
+}
+
+/* Parent folders when child page is active */
+.menu__list-item-collapsible > .menu__link.menu__link--active:not([href]),
+.menu__list-item-collapsible
+  > .menu__link.menu__link--active.menu__link--sublist:not([href]) {
+  font-weight: 400; /* name not colored */
+  color: var(--ifm-menu-color);
+}
+
+.menu__list-item-collapsible
+  > .menu__link.menu__link--active:not([href])::before {
+  background-color: var(--ifm-color-primary); /* only indicator colored */
+}
+
+/* ===============================
+   Remove all default decorations
+================================ */
+.menu__link,
+.menu__link--active {
+  border-left: none !important;
+  border-radius: 0 !important;
+  background: none !important;
+}
+
+/* Dark mode hover polish */
+[data-theme="dark"] .menu__link:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* ===============================
+   Collapse non-active folders automatically
+================================ */
+.menu__list-item-collapsible:not(.menu__list-item-collapsible--active)
+  > .menu__list {
+  display: none;
 }
