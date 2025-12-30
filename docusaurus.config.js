@@ -30,21 +30,13 @@ const config = {
       {
         docs: {
           sidebarPath: "./sidebars.js",
-
-          // Versioning configuration
           lastVersion: "current",
           versions: {
-            current: {
-              label: "Unreleased 🚧",
-            },
+            current: { label: "Unreleased 🚧" },
           },
-
           editUrl: "https://github.com/snikkrs/docusaurus-docs/tree/main/",
         },
-
-        // Disable blog unless you explicitly want it
         blog: false,
-
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -61,10 +53,7 @@ const config = {
 
     navbar: {
       title: "Home",
-      logo: {
-        alt: "Docs Logo",
-        src: "img/logo.svg",
-      },
+      logo: { alt: "Docs Logo", src: "img/logo.svg" },
       items: [
         {
           type: "docSidebar",
@@ -73,9 +62,12 @@ const config = {
           label: "Docs",
         },
         {
-          type: "docsVersionDropdown",
-          position: "right",
+          type: "html",
+          position: "left",
+          value: `<a href="/docusaurus-docs/api-reference/" class="navbar__link">API Reference</a>`,
         },
+
+        { type: "docsVersionDropdown", position: "right" },
         {
           href: "https://github.com/snikkrs/docusaurus-docs",
           label: "GitHub",

@@ -1,0 +1,79 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GitHub REST API Minimal",
+    "version": "v3"
+  },
+  "paths": {
+    "/repos/{owner}/{repo}": {
+      "get": {
+        "summary": "Get a repository",
+        "operationId": "getRepo",
+        "parameters": [
+          {
+            "name": "owner",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Repository retrieved successfully"
+          }
+        },
+        "tags": ["repos"]
+      }
+    },
+    "/issues/{owner}/{repo}": {
+      "get": {
+        "summary": "List issues",
+        "operationId": "listIssues",
+        "parameters": [
+          {
+            "name": "owner",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Issues retrieved successfully"
+          }
+        },
+        "tags": ["issues"]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "repos",
+      "description": "Repository endpoints"
+    },
+    {
+      "name": "issues",
+      "description": "Issues endpoints"
+    }
+  ]
+}
